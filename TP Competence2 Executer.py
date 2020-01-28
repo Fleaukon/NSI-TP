@@ -7,7 +7,7 @@ Compétence 2 : Executer
 
 """
 
-Prerequis : Prendre une feuille et un stylo. Vous allez lancer les codes suivants, avoir des erreurs et apprendre à reconnaitre les différents types d'erreur
+Prerequis : Prendre une feuille et un stylo. Vous allez lancer les codes suivants, avoir des erreurs et apprendre à reconnaitre les différents types d'erreur. A chaque fois que vous avez une erreur vous devez la corriger pour le que l'objectif soit atteint.
 
 """
 
@@ -116,3 +116,16 @@ Ecrivez sur une feuille les scripts corrigés.
 str = "Script "
 a = 1
 Script1 = str + a
+
+
+# Script 2 : On veut calculer 1.2 au carré
+
+u = 1,2
+v = u**2
+
+# Script 3 : On veut faire un string "Maison Jolie"
+
+L = []
+for lettre in "Maison":
+    L.append(lettre)
+Str = L + "Jolie"
