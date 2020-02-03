@@ -34,6 +34,19 @@ S = 0
 for i in range(1000):
     S = S  + f(i)
 
+"""
+
+Ce script calcule la somme de 1 à 1000 des (i+1)**2
+Au final on a :
+S = 1**2 + 2**2 + 3**2 + ... + 1000**2
+
+
+"""
+
+
+
+
+
 
 # Script 2 :
 
@@ -52,6 +65,15 @@ def UnSurXauCube(n):
         y = Inverse(Cube(x))
         Y.append(y)
     return (X,Y)
+
+"""
+
+
+"""
+
+
+
+
 
 # Script 3
 
