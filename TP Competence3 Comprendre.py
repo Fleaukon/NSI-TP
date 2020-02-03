@@ -68,11 +68,9 @@ def UnSurXauCube(n):
 
 """
 
+Ce script renvoie un couple de coordonnées. X sera toutes les abscisses de 1 à n (argument de la dernière fonction). Y sera l'ordonnée c.a.d. pour x sur l'axe des abcisses y = f(x) = 1 / x**3
 
 """
-
-
-
 
 
 # Script 3
@@ -116,6 +114,16 @@ def TransformerMotAlea(mot):
     NouveauMot = TransformerMot(mot,u)
     return NouveauMot
 
+"""
+
+Ce script transforme un mot (cf titre des fonctions...). La première fonction transforme une lettre en nombre selon sa place dans l'alphabet. La deuxième change ce code en un autre code utilisant un argument coeff. La troisième comme son nom l'indique prend un code et le transforme en lettre (c'est l'inverse de la première fonction). La quatrième transforme un mot : Elle prend chacune des lettres, les transforme en code, change ces codes selon un même coefficient, fait la transformation inverse de ces codes puis renvoie le nouvaeu mot.
+
+
+
+"""
+
+
+
 
 # Script 4 :
 
@@ -131,6 +139,19 @@ Compteur = 0
 for nombre in ListeNombreAuHasard:
     if nombre %2 == 0:  # Si nombre est pair
         Compteur = Compteur + 1
+
+"""
+
+Ce script crée une liste de nombre au hasard puis compte le nombre de nombre pair dans cette liste.
+
+
+"""
+
+
+
+
+
+
 
 
 
@@ -175,6 +196,29 @@ for SousDossier in os.listdir():
             im.save(newname,quality = 50, optimize = True)
             os.chdir(pathSousDossier)
         os.chdir(path)
+
+"""
+
+D'abord on import les packages demandés (os pour naviguer dans les dossiers, PIL pour manipuler les images)
+On récupère dans path le dossier de travail puis on met dans path le bon dossier de travail. via os.chdir on change de repertoire de travail pour aller dans path.
+
+Avec os.mkdir on cree un dossier Resize dont on récupère le chemin dans la variable pathResize. A la fin on est dans le dossier de travail initial.
+
+On fait ensuite une boucle sur tous les élts de ce repertoire de travail :
+    Si elt est Resize on ne fait rien sinon c'est un sous dossier et on rentre dans ce sous dossier (et on récupère son chemin dans pathSousDossier).
+    Puis on fait une boucle sur tous les élts de ce sous dossier (a priori ces elts sont des images) :
+        On crée une var im via le package PIL pour manipuler les images, puis on sauvegarde cette image à 50% de sa qualité et en optimisant (optimize = True) donc en fait on la compresse.
+
+Cet algorithme va chercher toutes les images dans des sous dossiers pour 1 les réunir et 2 les compresser.
+
+
+
+
+"""
+
+
+
+
 
 # Script 2
 
