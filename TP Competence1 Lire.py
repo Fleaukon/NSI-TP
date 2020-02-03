@@ -32,7 +32,12 @@ a = 1
 a = a + 1
 b = a
 L = [a,b,b+1]
+"""
+a int
+b int
+L liste
 
+"""
 
 # Script 2
 
@@ -41,6 +46,13 @@ b = "babar"
 "babar"
 Liste = a
 String = {1 : "un","B":b,"babar":"babar"}
+
+"""
+a       int
+b       string
+Liste   int
+String  Dico
+"""
 
 
 
@@ -58,22 +70,55 @@ Pour les scripts suivants donner le nom des fonctions, les arguments de ces fonc
 def Fonction1(a,b,c):
     return a + b + c
 
+"""
+
+nom :       Fonction1
+arguments : a,b,c
+Renvoie :   a + b + c
+
+"""
+
 
 # Script 2
 def AvecUnReturn(p,pp):
     a = p + pp
     print(a)
 
+"""
+
+nom :       AvecUnReturn
+arguments : p,pp
+Renvoie :   Rien !!!!
+
+"""
+
+
 # Script 3
 
 def EnFaitIlNyAvaitPasDeReturnAvant(argument):
     return str(argument)
+
+"""
+
+nom :       EnFaitIlNyAvaitPasDeReturnAvant
+arguments : argument
+Renvoie :   str(argument)
+
+"""
 
 # Script 4
 def PasD_Inspiration():
     a = input("Mettez un nombre")
     A = int(a)
     return A + 3
+
+"""
+
+nom :       PasD-Inspiration
+arguments : Rien !!
+Renvoie :   A + 3
+
+"""
 
 
 """
@@ -95,6 +140,11 @@ a = 1
 b = "2"
 c = "Babar"
 
+"""
+Locales :   Rien
+Globales :  a,b,c
+"""
+
 
 # Script 2
 
@@ -104,6 +154,10 @@ b = "2"
 def Babar(c):
     return c
 
+"""
+Locales :   c
+Globales :  a,b, Babar (qui est une fonction)
+"""
 
 # Script 3
 
@@ -113,6 +167,12 @@ def Barbare(b):
     c = b + 1
     return c**2
 
+"""
+Locales :   b,c
+Globales :  a,b,Barbare
+
+Attention les 2 b sont différents !!
+"""
 
 # Script 4
 
@@ -123,6 +183,11 @@ def Trois():
     b = 4
     return a + b
 C = Trois()
+
+"""
+Locales :   aa,b
+Globales :  a,deux,Trois, C
+"""
 
 
 
@@ -136,17 +201,18 @@ Recopier et Corriger les Scripts suivants
 
 # Script 1
 
-def fonction()
+def fonction()#:
     return 3
 
 # Script 2
 
-for i in range(3)
+for i in range(3)#:
     print(i)
 
 # Script 3
 
 for i in range(3):
+    #Il faut une indentation
 print(i)
 
 # Script 4
@@ -154,4 +220,4 @@ print(i)
 def Fonction():
     a = "Kikou"
     b = 2
-    return a + b
+    return a + b #TypeError ici il faut str(b)
