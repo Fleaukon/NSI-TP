@@ -342,6 +342,20 @@ class Eleve:
             self.voeux.append("NSI")
         self.voeux.sort()
 
+"""
+
+La classe Eleve représente un Eleve.
+Ses attributs sont :
+    nom     qui est un string   initialisé à "Moi"
+    genre   qui est un string   initialisé à "Adolescent"
+    voeux   qui est une liste   initialisé à [] liste vide
+
+Sa méthode est Voeux (avec un grand V) qui prend en entrée une liste L (en plus de self). Elle ajoute un genre en fonction de ce qu'il y a dans L[0]. Elle ajoute à voeux des matières en fonction de ce qu'il y a dans le reste de L. A priori les données doivent être classé dans un autre fichier et Voeux permet de stocker ces données dans des objets Eleve.
+
+
+"""
+
+
 
 class Classe:
     def __init__(self):
@@ -366,6 +380,26 @@ class Classe:
 
     def AjoutEleve(self,Eleve):
         self.DicoEleve[Eleve.nom] = Eleve
+
+"""
+
+La classe Classe (et oui c'est la classe !) représente une Classe de lycée.
+Ces attributs sont :
+    Homme:      qui est un entier           initialisé à 0  et qui représente le nombre de garçons dans une classe.
+    Femme :     qui est un entier           initialisé à 0  et qui représente le nombre de filles dans une classe.
+    N :         qui est un entier           initialisé à 0  et qui représente le nombre d'élèves dans une classe.
+    DicoSpé :   qui est un dictionnaire     initialisé avec toutes les matières comme clés et toutes les valeurs mise à 0. Il compte le nombre d'élèves dans chaque spécialité.
+    DicoEleve:  qui est un dictionnaire     initialisé à un dictionnaire vide. Il gardera en mémoire les élèves dans la classe.
+    DispersionSL : qui est un entier RELATIF et qui mesure si les classes sont très scientifiques ou très litéraires.
+
+Ces méthodes sont :
+    update : qui ne prend rien en entrée et qui met à jour Homme,Femme,N, DispersionSL et DicoSpé via une boucle sur DicoEleve
+    AjoutEleve : qui prend en entrée un objet Eleve et qui l'ajoute au dictionnaire DicoEleve avec comme clé son nom.
+
+
+"""
+
+
 
 
 class GroupeDeClasses:
@@ -464,3 +498,27 @@ class GroupeDeClasses:
         self.EffectifTotal = sum(Effectif)
         return self.Energie
 
+"""
+
+La classe GroupeDeClasses représente la configuration de tous les premières.
+
+Ses attributs sont :
+    DicoSeconde qui est un dictionnaire initialisé à DicoSeconde (argument de __init__) et qui a le nom de tous les secondes et de tous leur voeux
+    DicoSave = DicoSave qui est une sauvegarde de DicoSeconde initialement
+    DicoClasse = {} qui est un dictionnaire vide et qui prendra des objets Classes comme information.
+    self.Energie = 1000000 qui est un entier et qui permet d'associer un nombre à un groupe de Classe. Plus l'energie est grande moins le groupe de classes est bon. L'objectif sera de minimiser cette Energie via des permutations d'Eleves.
+    self.n = 6 qui est un entier et qui représente le nombre de classes de premières
+    self.EffectifTotal = 0 qui compte le nombre total d'élèves dans toutes les classes. C'est une variables de Test pour vérifier que l'algorithme ne fasse pas disparaître des élèves..
+
+
+La méthode FaireClasseGene prend les elèves de DicoSeconde et les répartit aléatoirement dans les classes.
+La méthode DeplacerEleve prend en entrée une classe et une proba p (nombre compris en 0 et 1) et pour chaque élève de la classe le met dans une autre classe avec probabilité p.
+La méthode CalculEnergie calcule l'energie du GroupeDeClasses, en prenant en compte le nombre d'élève par classe, la taille des groupes de Spé par Classe (la liste L), les ecarts types F/G S/L.
+La méthode Optimiser prend en entrée ite qui représente le nombre d'itération que l'on va faire pour minimiser l'energie.
+    On fait d'abord une deepcopy de DicoClasse
+    Puis via DeplacerEleve on fait changer des élèves de classes
+    Si l'energie de la nouvelle configuration est plus faible on prend cette nouvelle configuration sinon on garde l'ancienne (comme un algorithme de recherche du min) #BestPedagogieEver
+
+
+
+"""
