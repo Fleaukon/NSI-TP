@@ -251,6 +251,22 @@ def Lancer(path):
         doss(str(i),path)
 
 
+"""
+
+La première fonction crée aléatoirement un dossier dans le repertoire D puis revient au dossier path.
+La seconde fonction change le repertoire de travail et renvoie l'adresse du nouveau repertoire de travail (elle le print aussi)
+La troisième crée 10 dossiers et des sous-dossiers aléatoirement grace à la fonction doss.
+La seconde fonction est inutile.
+
+
+"""
+
+
+
+
+
+
+
 # Script 3
 
 import os
@@ -265,6 +281,14 @@ with codecs.open("NC1.tex","r", encoding = 'utf-8') as file:
 
 with codecs.open("test.tex","w",encoding = 'utf-8') as file:
     file.write(d)
+
+
+"""
+
+Ce script import os et codecs (doit servir à l'encodage) puis ce rend sur un dossier Compilateur de Cours, crée un dossier Test.
+Ensuite il lit "NC1.tex" et recopie le contenu dans "test.tex"
+
+"""
 
 
 
