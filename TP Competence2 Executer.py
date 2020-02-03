@@ -27,12 +27,19 @@ Pour les Scripts suivants, vous allez executer les codes suivants et écrire sur
 a = 2
 b = 4
 a = b**a + a**b
+"""
+a = 32
+"""
 
 # Script 2 : Ecrire le dernier élément de L
 
 L = []
 for i in range(9):
     L.append(i**2)
+"""
+La réponse est 64
+"""
+
 
 # Script 3 : Donner f(3)
 
@@ -42,12 +49,18 @@ def f(n):
         L.append(i**2)
     s = sum(L)
     return s
+"""
+f(3) = 5
+"""
 
 # Script 4 : A priori que devrait donner f(3) et calculer f(3)
 
 n = 5
 def f(n):
     return n + 1
+"""
+f(3) = 4
+"""
 
 
 """
@@ -64,19 +77,23 @@ Ecrire le script corrigé sur feuille.
 
 # Script 1 : alpha est un nombre
 
+#alpha  = 1
 beta = alpha + 1
 
 # Script 2 : String est un string
 
+#String  = "blaBla"
 String.upper()
 
 # Script 3 : LListe est une liste
 
+#LListe  = []
 for i in range(9):
     LListe.append(i)
 
 # Script 4 : Dico est un Dictionnaire
 
+#Dico = {}
 Dico["AA"] = "aa"
 
 # Script 5 : gamma est un nombre
@@ -84,7 +101,7 @@ Dico["AA"] = "aa"
 def f(gamma):
     delta = gamma + 1
     return delta
-
+#gamma = 3
 print(gamma)
 
 
@@ -94,6 +111,7 @@ def f(gamma):
     delta = gamma + 1
     return delta
 
+#delta = f(3)
 print(delta)
 
 
@@ -115,17 +133,21 @@ Ecrivez sur une feuille les scripts corrigés.
 
 str = "Script "
 a = 1
+#a = str(a)
 Script1 = str + a
 
 
 # Script 2 : On veut calculer 1.2 au carré
 
 u = 1,2
+#u = 1.2
 v = u**2
 
 # Script 3 : On veut faire un string "Maison Jolie"
 
 L = []
+#Str = ""
 for lettre in "Maison":
     L.append(lettre)
-Str = L + "Jolie"
+    # Str = Str + lettre
+Str = L + "Jolie" # Cette ligne est mauvaise
