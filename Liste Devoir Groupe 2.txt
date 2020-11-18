@@ -1,0 +1,16 @@
+
+Training : Vous devez savoir écrire le code en Python pas le peudo code.
+
+Jeudi :    Cours sur le Tri-Fusion. Exemple
+Vendredi : Finir Exercice (NSI-TP) : 3e Tri = Tri/Fusion
+Samedi :   Faire une fiche synthèse sur les Arbres
+Dimanche : Regarder un Package pour faire des arbres. Créer 4 exemples, calculer nombres de feuilles et taille de l'arbre
+Lundi :    Cours sur les Arbres de Recherche. Faites un exemple en Python et un exemple sur Feuille.
+Mardi :    Implémenter Méthode de l'Insertion sur les Arbres de Recherche.
+Mercredi : Training Tri par selection et par Insertion. Vous devez être capable d'écrire un de ces algorithme en moins de 3 min.
+Jeudi :    Training Arbre. Recherche préfixe, postfixe, infixe en moins de 4min chacun (avec Arbre, et ordre des noeuds parcouru).
+Vendredi : Fiche synthèse (avec le code python) sur les files et les piles
+Samedi :   Fiche Synthèse sur le Parcours en Largeur
+Dimanche : Appliquer le Parcours en Largeur à la lecture de dossier sur Windows (cf Exercice sur NSI-TP sur Github)
+Lundi :    Training Parcours en Largeur en moins de 3 minutes 
+Mardi :    Préparation à Mercredi : Vérifier Fiches Synthèses, Compréhensions, Training.
