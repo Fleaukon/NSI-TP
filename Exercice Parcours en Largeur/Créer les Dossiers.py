@@ -1,6 +1,8 @@
 import random
 import os
-root = os.getcwd() #Naviguer avant de lancer le programme sinon ça va envahir Home
+import numpy as np
+root = os.getcwd() #Naviguer avant de lancer le programme sinon ça va envahir votre dossier utilisateur
+
 File = []
 Compteur = 0
 
@@ -8,8 +10,9 @@ Compteur = 0
 def MkDos(p,path): #path chemin dossier, p proba de créer un dossier
     global File,Compteur
     os.chdir(path)
-    u = 0
+    u = random.random()
     while u<p:
+        print("Création")
         os.mkdir(str(Compteur))
         os.chdir(str(Compteur))
         temp_path = os.getcwd()
@@ -25,7 +28,10 @@ def Boucle(p,t): #p proba initiale, t taux de décroissance
     MkDos(p,root)
     while len(File)>0:
         pathDos = File.pop(0)
-        p = max(0, p-t)
-        print(Compteur)
-        print(p)
+        p = max(0, p*np.exp(-t*Compteur))
+        print(len(File))
         MkDos(p,pathDos)
+
+
+#Enlever le commentaire de la ligne suivante et lancer la Fonction Boucle
+#Boucle(0.9,0.000001)
