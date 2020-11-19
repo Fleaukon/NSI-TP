@@ -5,16 +5,19 @@ root = os.getcwd() #Naviguer avant de lancer le programme sinon ça va envahir v
 
 File = []
 Compteur = 0
+Alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
 
 
 def MkDos(p,path): #path chemin dossier, p proba de créer un dossier
     global File,Compteur
     os.chdir(path)
     u = random.random()
+    v = random.random()
     while u<p:
         print("Création")
         os.mkdir(str(Compteur))
         os.chdir(str(Compteur))
+        # Ajouter ouvrir document avec proba v et écrire Alphabet[compteur%26]
         temp_path = os.getcwd()
         File.append(temp_path)
         os.chdir("..")
