@@ -1,4 +1,4 @@
 Dans cet exercice il va falloir appliquer l'algorithme du parcours en Largeur.
 Dans certains sous dossiers (pas tous) il y aura un fichier texte. Vous devez faire un algorithme en python qui descent l'arborescence des dossiers et qui lit les fichier texte dans le bon sens.
 
-A la fin la phrase est : ""
+Ouvrir le fichier Python pour qu'il vous crée l'arborescence des dossiers.
